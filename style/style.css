@@ -1,0 +1,318 @@
+@font-face {
+  font-family: "Inter";
+  src: url("../font/InterVariable.ttf");
+  font-weight: 100 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Inter";
+  will-change: all;
+}
+
+body {
+  color: #3f3f3f;
+}
+
+body input,
+body button {
+  border: none;
+  outline: none;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+body p {
+  line-height: 150%;
+}
+
+body a {
+  color: inherit;
+}
+
+body .main-container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 1rem 0.5rem;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#818cf8), color-stop(#a78bfa), to(#f472b6));
+  background-image: linear-gradient(to bottom right, #818cf8, #a78bfa, #f472b6);
+  background-attachment: fixed;
+}
+
+@media screen and (min-width: 640px) {
+  body .main-container {
+    padding: 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body .main-container {
+    padding: 3rem 10rem;
+  }
+}
+
+body .main-container form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 1.5rem 0.5rem 0.5rem;
+  -webkit-transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) -webkit-backdrop-filter;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) -webkit-backdrop-filter;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) backdrop-filter;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) backdrop-filter, 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) -webkit-backdrop-filter;
+}
+
+@media screen and (min-width: 640px) {
+  body .main-container form {
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body .main-container form {
+    padding: 1rem 10rem;
+  }
+}
+
+body .main-container form.on-scroll {
+  -webkit-backdrop-filter: blur(25px) saturate(180%) brightness(105%);
+          backdrop-filter: blur(25px) saturate(180%) brightness(105%);
+}
+
+body .main-container form * {
+  mix-blend-mode: color-dodge;
+}
+
+body .main-container form .city-input {
+  padding: 0.5rem;
+  width: 100%;
+  color: #ffffff;
+  font-size: 1.125rem;
+  background-color: #ffffff34;
+  border-radius: 11px;
+}
+
+body .main-container form .city-input::-webkit-input-placeholder {
+  color: #ffffff7c;
+}
+
+body .main-container form .city-input:-ms-input-placeholder {
+  color: #ffffff7c;
+}
+
+body .main-container form .city-input::-ms-input-placeholder {
+  color: #ffffff7c;
+}
+
+body .main-container form .city-input::placeholder {
+  color: #ffffff7c;
+}
+
+body .main-container .date-time {
+  margin: 4rem 0 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .main-container .date-time * {
+  color: #ffffff;
+}
+
+body .main-container .date-time .time {
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+body .main-container .date-time p {
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body .main-container .weather-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+body .main-container .weather-container .no-weather-data {
+  position: relative;
+  margin-bottom: 0.5rem;
+  padding: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-container .weather-container .no-weather-data::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #f5f5f599;
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+          backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 11px;
+}
+
+@media screen and (min-width: 1024px) {
+  body .main-container .weather-container .no-weather-data {
+    height: 100%;
+    width: 100%;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 4;
+  }
+}
+
+body .main-container .weather-container .no-weather-data.hide {
+  display: none;
+}
+
+body .main-container .weather-container .no-weather-data * {
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .weather-container .no-weather-data p {
+  text-align: center;
+}
+
+body .main-container .weather-container .weather-data {
+  position: relative;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  body .main-container .weather-container .weather-data {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+body .main-container .weather-container .weather-data:last-child {
+  margin: 0;
+}
+
+body .main-container .weather-container .weather-data::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: #f5f5f599;
+  -webkit-backdrop-filter: blur(25px) saturate(180%);
+          backdrop-filter: blur(25px) saturate(180%);
+  border-radius: 11px;
+}
+
+body .main-container .weather-container .weather-data .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase;
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .weather-container .weather-data .header .remove {
+  cursor: pointer;
+}
+
+body .main-container .weather-container .weather-data .info {
+  margin-top: 0.5rem;
+}
+
+body .main-container .weather-container .weather-data .info .temp-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .main-container .weather-container .weather-data .info .temp-pic .temp {
+  font-weight: 300;
+  font-size: 4rem;
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .weather-container .weather-data .info .temp-pic .pic {
+  mix-blend-mode: soft-light;
+}
+
+body .main-container .weather-container .weather-data .info p {
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .weather-container .weather-data .info .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #3f3f3f;
+  opacity: 0.5;
+  margin: 1rem 0;
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .weather-container .weather-data .info .misc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .credits {
+  margin-top: 5rem;
+  text-align: center;
+  mix-blend-mode: color-burn;
+}
+
+body .main-container .credits a {
+  -webkit-transition: 0.5s color;
+  transition: 0.5s color;
+}
+
+body .main-container .credits a:hover {
+  color: #a3a3a3;
+}

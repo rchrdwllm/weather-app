@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style/style.css" />
+        <title>Weather | By Richard William</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <form>
+                <input
+                    type="text"
+                    class="city-input"
+                    placeholder="Search city..."
+                />
+            </form>
+            <div class="date-time">
+                <p class="date-time-label">Weather as of</p>
+                <h1 class="time"></h1>
+                <p class="date"></p>
+            </div>
+            <div class="weather-container">
+                <div class="no-weather-data">
+                    <p>No weather data</p>
+                </div>
+            </div>
+            <p class="credits">
+                    API is from
+                    <a
+                        href="https://openweathermap.org/api"
+                        target="_blank"
+                        rel="noreferrer"
+                        >OpenWeatherMap</a
+                    >. Designed and developed by
+                    <a
+                        href="https://rchrdwllm.github.io/"
+                        target="_blank"
+                        rel="noreferrer"
+                        >Richard William</a
+                    >.
+            </p>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
