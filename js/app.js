@@ -122,7 +122,7 @@ function updateDateTime() {
 
     console.log(currentHour);
 
-    time.innerHTML = `${currentHour}:${minutes < 10 ? "0" + minutes : minutes}`;
+    time.innerHTML = `${currentHour === 0 ? "12" : currentHour}:${minutes < 10 ? "0" + minutes : minutes}`;
     date.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}`;
 }
 
